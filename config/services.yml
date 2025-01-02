@@ -1,0 +1,12 @@
+services:
+    _defaults:
+        autowire: true
+        bind:
+            $root_path: '%core.root_path%'
+            $php_ext: '%core.php_ext%'
+            $table_prefix: '%core.table_prefix%'
+
+    phpbbmodders.openreports.listener:
+        class: phpbbmodders\openreports\event\main_listener
+        tags:
+            - { name: event.listener }

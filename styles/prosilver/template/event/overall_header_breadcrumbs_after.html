@@ -1,0 +1,11 @@
+{% if U_PM_REPORTS %}
+<li class="openreports rightside responsive-hide">
+	{% if U_PM_REPORTS %}
+	<a href="{{ U_PM_REPORTS }}" role="menuitem">{{ PM_REPORTS }}</a>
+	{% endif %}
+	{% if U_PM_REPORTS and U_POST_REPORTS %} &nbsp;&bull;&nbsp; {% endif %}
+	{% if U_POST_REPORTS %}
+	<a href="{{ U_POST_REPORTS }}" role="menuitem">{{ POST_REPORTS }}</a>
+	{% endif %}
+</li>
+{% endif %}
